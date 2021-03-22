@@ -13,7 +13,7 @@ public class Simulation {
                 String itemString = sca.nextLine();
                 int position=itemString.indexOf("=");
                 String name = itemString.substring(0, position);
-                int weight = Integer.parseInt(itemString.substring(position + 1));
+                int weight = Integer.parseInt(itemString.substring(position+1));
                 Item item = new Item(name, weight);
                 itemList.add(item);
             }
@@ -53,8 +53,8 @@ public ArrayList<Rocket> loadU1(ArrayList<Item> itemArrayList) {
 
     public ArrayList<Rocket> runSimulation(ArrayList<Rocket> rockets) {
         Rocket rocket=new Rocket();
-        while (!rocket.launch())  rocket.launch();
-        while (!rocket.land()) rocket.land();
+        if (!rocket.launch())  rocket.launch();
+        if (!rocket.land()) rocket.land();
         return rockets;
     }
 

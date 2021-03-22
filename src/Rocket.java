@@ -8,18 +8,17 @@
 
      @Override
      public boolean launch() {
-         return launch();
+         return true;
      }
 
      @Override
      public boolean land() {
-         return land();
+         return true;
      }
 
      @Override
      public boolean canCarry(Item item) {
-         if (canCarry(item)) return true;
-         return false;
+         return currentWeight + item.weight <= maxWeight;
      }
 
      @Override
