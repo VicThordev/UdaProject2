@@ -5,6 +5,8 @@
     double launchExplosion;
     double landingSuccess;
     int currentWeight;
+     int budget;
+
 
      @Override
      public boolean launch() {

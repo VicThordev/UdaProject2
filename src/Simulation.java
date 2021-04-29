@@ -20,7 +20,7 @@ public class Simulation {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
     }
-        String str = itemList.toString();
+
         return itemList;
 }
 
@@ -38,7 +38,7 @@ public ArrayList<Rocket> loadU1(ArrayList<Item> itemArrayList) {
     return loadRocket;
 }
     public ArrayList<Rocket> loadU2(ArrayList<Item> itemArrayList) {
-        ArrayList<Rocket> loadRocket=new ArrayList<Rocket>();
+        ArrayList<Rocket> loadRocket=new ArrayList<>();
         Rocket rocket = new U2();
         for (Item item:itemArrayList) {
             while (!rocket.canCarry(item)) {
