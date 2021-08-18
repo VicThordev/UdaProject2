@@ -22,12 +22,12 @@ public class U1 extends Rocket{
                 String itemString = sca.nextLine();
                 int position=itemString.indexOf("=");
                 String name = itemString.substring(0, position);
+                cargoLimit=maxWeight-rocketWeight;
                 int weight = Integer.parseInt(itemString.substring(position+1));
                 for (int i=0;i<=weight;i++) {
-                    budget+=weight;
-                launchExplosion = 5.0*(weight)/(maxWeight-rocketWeight);
+                    budget=weight;
+                launchExplosion = 5.0*(weight)/(cargoLimit);
                 }
-                System.out.println(budget);
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -45,9 +45,11 @@ public class U1 extends Rocket{
                 String itemString = sca.nextLine();
                 int position=itemString.indexOf("=");
                 String name = itemString.substring(0, position);
+                cargoLimit=maxWeight-rocketWeight;
                 int weight = Integer.parseInt(itemString.substring(position+1));
-                for (int i=0;i<weight;i++) {
-                    landingSuccess = 1.0*(weight)/(maxWeight-rocketWeight);
+                for (int i=0;i<=weight;i++) {
+                    budget=weight;
+                    landingSuccess = 1.0*(weight)/(cargoLimit);
                 }
             }
         } catch (FileNotFoundException e) {

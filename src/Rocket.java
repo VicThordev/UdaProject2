@@ -6,7 +6,7 @@
     double landingSuccess;
     int currentWeight;
      int budget;
-
+     int cargoLimit;
 
      @Override
      public boolean launch() {

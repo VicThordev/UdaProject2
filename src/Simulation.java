@@ -20,7 +20,6 @@ public class Simulation {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
     }
-
         return itemList;
 }
 
