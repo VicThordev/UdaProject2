@@ -32,6 +32,10 @@ public class U1 extends Rocket{
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+        //You don't need everything from line 18 to 34
+        //remove all of that and just use the line below
+        //launchExplosion = 5.0 * (currentWeight - rocketWeight) / (maxWeight - rocketWeight);
+        //REMEMBER to do this for launch() in U2 as well
         return launchExplosion<=randomNumber;
     }
 
@@ -55,6 +59,10 @@ public class U1 extends Rocket{
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
+        //You don't need everything from line 44 to 60
+        //remove all of that and just use the line below
+        //landingSuccess = 1.0 * (currentWeight - rocketWeight) / (maxWeight - rocketWeight);
+        //REMEMBER to do this for land() in U2 as well
         return landingSuccess<=randomNumber;
     }
 }
