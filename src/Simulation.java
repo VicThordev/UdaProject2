@@ -50,11 +50,7 @@ public ArrayList<Rocket> loadU1(ArrayList<Item> itemArrayList) {
         return loadRocket;
     }
 
-    public ArrayList<Rocket> runSimulation(ArrayList<Rocket> rockets) {
-        /*Rocket rocket=new Rocket();
-        if (!rocket.launch())  rocket.launch();
-        if (!rocket.land()) rocket.land();
-        return rockets;*/
+    public int runSimulation(ArrayList<Rocket> rockets) {
         int numOfTrials =0;
         for (Rocket rocket : rockets) {
             while (!rocket.launch()) {
@@ -66,7 +62,7 @@ public ArrayList<Rocket> loadU1(ArrayList<Item> itemArrayList) {
                 numOfTrials++;
             }
         }
-        int budget=rockets.get(0).rocketCost*(rockets.size()+numOfTrials);
+        int budget= rockets.get(0).rocketCost*(rockets.size()+numOfTrials);
         return budget;
     }
 
