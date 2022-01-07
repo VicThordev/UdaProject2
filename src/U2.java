@@ -4,10 +4,10 @@ import java.util.Scanner;
 
 public class U2 extends Rocket {
     public U2() {
-        rocketCost=120;
-        rocketWeight=18;
+        rocketCost=12000000;
+        rocketWeight=18000;
         currentWeight=rocketWeight;
-        maxWeight=29;
+        maxWeight=29000;
         launchExplosion=0.0;
         landingSuccess=0.0;
     }

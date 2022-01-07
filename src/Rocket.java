@@ -25,7 +25,7 @@
 
      @Override
      public int carry(Item item) {
-         //currentWeight+=item.weight;
-         return currentWeight+=rocketWeight;
+         currentWeight+=item.weight;
+         return currentWeight;
      }
  }
