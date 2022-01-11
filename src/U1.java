@@ -3,7 +3,8 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class U1 extends Rocket{
-    public U1() {
+    public U1(int rocketCost, int rocketWeight, int currentWeight, int maxWeight, double launchExplosion, double landingSuccess) {
+        super(rocketCost, rocketWeight,maxWeight,launchExplosion,landingSuccess,currentWeight);
         rocketCost=100000000;
         rocketWeight=10000;
         maxWeight=18000;
