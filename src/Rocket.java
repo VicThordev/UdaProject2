@@ -8,14 +8,7 @@
      int budget;
      int cargoLimit;
 
-     public Rocket(int rocketCost, int rocketWeight, int maxWeight, double launchExplosion, double landingSuccess, int currentWeight) {
-         this.rocketCost = rocketCost;
-         this.rocketWeight = rocketWeight;
-         this.maxWeight = maxWeight;
-         this.launchExplosion = launchExplosion;
-         this.landingSuccess = landingSuccess;
-         this.currentWeight = currentWeight;
-     }
+
 
      @Override
      public boolean launch() {

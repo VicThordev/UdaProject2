@@ -25,11 +25,11 @@ public class Simulation {
 
 public ArrayList<Rocket> loadU1(ArrayList<Item> itemArrayList) {
     ArrayList<Rocket> loadRocket = new ArrayList<>();
-    Rocket rocket = new U1(100000000,10000, 10000,18000,0.0, 0.0);
+    Rocket rocket = new U1();
     for (Item item : itemArrayList) {
         while (!(rocket.canCarry(item))) {
             loadRocket.add(rocket);
-            rocket = new U1(100000000, 10000, 10000, 18000, 0.0, 0.0);
+            rocket = new U1();
         }
         rocket.canCarry(item);
     }
@@ -38,11 +38,11 @@ public ArrayList<Rocket> loadU1(ArrayList<Item> itemArrayList) {
 }
     public ArrayList<Rocket> loadU2(ArrayList<Item> itemArrayList) {
         ArrayList<Rocket> loadRocket=new ArrayList<>();
-        Rocket rocket = new U2(12000000, 18000, 18000, 29000, 0.0, 0.0);
+        Rocket rocket = new U2();
         for (Item item:itemArrayList) {
             while (!rocket.canCarry(item)) {
                 loadRocket.add(rocket);
-                rocket = new U2(12000000, 18000, 18000, 29000, 0.0, 0.0);
+                rocket = new U2();
             }
             rocket.carry(item);
         }
