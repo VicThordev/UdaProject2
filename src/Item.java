@@ -1,6 +1,6 @@
 public class Item {
-    String name;
-    int weight;
+    private String name;
+    private int weight;
 
     /*public Item(String name, int weight) {
 

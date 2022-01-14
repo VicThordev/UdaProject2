@@ -22,12 +22,12 @@
 
      @Override
      public boolean canCarry(Item item) {
-         return currentWeight + item.weight <= maxWeight;
+         return currentWeight + item.getWeight() <= maxWeight;
      }
 
      @Override
      public int carry(Item item) {
-         currentWeight+=item.weight;
+         currentWeight+=item.getWeight();
          return currentWeight;
      }
  }

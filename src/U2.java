@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.util.Random;
 import java.util.Scanner;
 
 public class U2 extends Rocket {
@@ -15,7 +16,8 @@ public class U2 extends Rocket {
 
     @Override
     public boolean launch() {
-        int randomNumber = (int) (Math.random()*100+1);
+        Random random = new Random();
+        int randomNumber = random.nextInt();
         landingSuccess = 8.0*(currentWeight-rocketWeight)/(maxWeight-rocketWeight);
         return launchExplosion<=randomNumber;
     }
