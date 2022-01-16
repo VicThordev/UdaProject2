@@ -14,7 +14,9 @@ public class Simulation {
                 int position=itemString.indexOf("=");
                 String name = itemString.substring(0, position);
                 int weight = Integer.parseInt(itemString.substring(position+1));
-                Item item = new Item(name, weight);
+                Item item = new Item();
+                item.setName(name);
+                item.setWeight(weight);
                 itemList.add(item);
             }
         } catch (FileNotFoundException e) {

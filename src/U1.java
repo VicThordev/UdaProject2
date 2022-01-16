@@ -16,7 +16,6 @@ public class U1 extends Rocket{
         int randomNumber = random.nextInt();
 
         launchExplosion=5.0*(currentWeight - rocketWeight) / (maxWeight - rocketWeight);
-        //System.out.println(currentWeight-rocketWeight);
         return launchExplosion<=randomNumber;
     }
 

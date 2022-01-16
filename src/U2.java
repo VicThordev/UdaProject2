@@ -24,7 +24,8 @@ public class U2 extends Rocket {
 
     @Override
     public boolean land() {
-        int randomNumber = (int) (Math.random()*100+1);
+        Random random = new Random();
+        int randomNumber = random.nextInt();
         landingSuccess=1.0*(currentWeight-rocketWeight)/(maxWeight-rocketWeight);
         return launchExplosion<=randomNumber;
     }
